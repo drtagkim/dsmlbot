@@ -28,6 +28,7 @@ def getAnswer(question):
     data = json.dumps({"question": question})
     r = requests.post(url, headers=headers, data=data)
     rjson = json.loads(r.text)
+    print(rjson)
     answer = rjson.get('answers')[0]['answer']
     answer = html.parser.HTMLParser().unescape(answer)
     return answer
@@ -55,4 +56,4 @@ def Message():
         dataSend=main_msg2
     return jsonify(dataSend)
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=4000)
+    app.run(host="0.0.0.0",port=5000)
