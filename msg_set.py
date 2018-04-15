@@ -33,8 +33,9 @@ msg_4=Message("어떤 성과가 있나요?","DS&ML센터는 데이터 과학에 
       2억 5천만원을 목표로 노력하고 있습니다. 아울러 비즈니스 코딩 능력을 향상시켜 보다\
       많은 사람들이 데이터 과학의 혜택을 누릴 수 있도록 사회적 책무를 다하기 위한 사업을 추진 중에 있습니다.",toMessages=[msg_4_1,msg_4_2,msg_4_3])
 msg_5=Message("DSML-양식 보기","원하는 양식을 고르십시오.",toMessages=[msg_5_1,msg_5_2])
+msg_6=Message("알아두면 좋을 소식은?","알면 즐겁지요.",Ext=MessageButton("소식 보기","https://sites.google.com/view/dsml-news/home"))
 #home
-msg_home=Message("HOME","보다 자세한 점이 궁금하시면 1:1 채팅으로 물어봐 주시면 곧 연락드리겠습니다. 감사합니다. DSML 센터 일동 올림.",toMessages=[msg_1,msg_2,msg_3,msg_4,msg_5]) #HOME
+msg_home=Message("HOME","보다 자세한 점이 궁금하시면 1:1 채팅으로 물어봐 주시면 곧 연락드리겠습니다. 감사합니다. DSML 센터 일동 올림.",toMessages=[msg_6,msg_1,msg_2,msg_3,msg_4,msg_5]) #HOME
 #hook
 # level 2
 msg_1_1.hook([msg_1,msg_home])
@@ -57,6 +58,7 @@ msg_2.hook([msg_home])
 msg_3.hook([msg_home])
 msg_4.hook([msg_home])
 msg_5.hook([msg_home])
+msg_6.hook([msg_home])
 #register
 all_msgs.append(msg_home)
 all_msgs.append(msg_1)
@@ -78,3 +80,4 @@ all_msgs.append(msg_4_3)
 all_msgs.append(msg_5)
 all_msgs.append(msg_5_1)
 all_msgs.append(msg_5_2)
+all_msgs.append(msg_6)
